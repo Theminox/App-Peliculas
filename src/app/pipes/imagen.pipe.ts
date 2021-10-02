@@ -1,15 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
+const URL = 'https://image.tmdb.org/t/p'
+
 @Pipe({
   name: 'imagen'
 })
 export class ImagenPipe implements PipeTransform {
 
-  transform(value: unknown, ...args: unknown[]): unknown {
-   
-    https://image.tmdb.org/t/p/w500/kqjL17yufvn9OVLyXYpvtyrFfak.jpg
-   
-   return null;
+  transform(img: string, size: string = 'w500'): string {
+
+    if(!img){
+      return './assets/no-image-banner.png';
+    }
+
+    const imgUrl = `${URL}/${size}/${img}`;
+    return imgUrl;
   }
 
 }
