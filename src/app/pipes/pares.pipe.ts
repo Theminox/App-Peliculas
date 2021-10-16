@@ -12,10 +12,10 @@ export class ParesPipe implements PipeTransform {
       if ( index % 2 === 0) {
         result.push(array.slice(index, index + 2));
       }
+      
        return result;
     }, []);
-    
-      console.log(pares);
+
       return pares;
     }
 }
