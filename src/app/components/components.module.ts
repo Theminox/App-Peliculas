@@ -9,21 +9,23 @@ import { DetalleComponent } from './detalle/detalle.component';
 
 
 
+
+
 @NgModule({
-  entryComponents: [
-    DetalleComponent,
+  entryComponents:[
+    DetalleComponent
   ],
   declarations: [
     SlideshowBackdropComponent,
     SlideShowPosterComponent,
     SlidesshowParesComponent,
-    DetalleComponent,
+    DetalleComponent
   ],
   exports: [
     SlideshowBackdropComponent,
     SlideShowPosterComponent,
     SlidesshowParesComponent,
-    DetalleComponent,
+    DetalleComponent
   ],
   imports: [
     CommonModule,
